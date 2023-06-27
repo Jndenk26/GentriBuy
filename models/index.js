@@ -29,4 +29,5 @@ User.hasOne(Funds, {
 Funds.belongsTo(User, {
   foreignKey: 'user_id'
 });
+
 module.exports = { User, Funds, Items, Pledges };
