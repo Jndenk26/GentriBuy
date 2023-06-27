@@ -13,7 +13,7 @@ Pledges.init(
       autoIncrement: true,
     },
     money: {
-      type: DataTypes.FLOAT(1000,2),
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         isNumeric: true,
