@@ -1,0 +1,28 @@
+:root {
+    --darkBlue: #071A52;
+}
+
+body {
+    background-color: #464646;
+}
+
+#mainNav {
+    height: 100%;
+    width: fit-content;
+    background-color: var(--darkBlue);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 3px solid black;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+#mainNav a {
+    color:chartreuse;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-decoration: none;
+    margin-top: 5%;
+}
