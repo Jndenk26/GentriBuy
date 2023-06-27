@@ -6,11 +6,17 @@ body {
     background-color: #464646;
 }
 
+main {
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+}
+
 #mainNav {
     height: 100%;
-    width: fit-content;
+    width: 20%;
+    min-width: fit-content;
     background-color: var(--darkBlue);
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,4 +31,26 @@ body {
     font-family: sans-serif;
     text-decoration: none;
     margin-top: 5%;
+}
+
+#homeContainer {
+    width: 80%;
+}
+
+header {
+    text-align: center;
+}
+
+#homeItemContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.homeItemBox {
+    width: 26%;
+    border: 5px solid chartreuse;
+    margin-top: 3%;
+    text-align: center;
 }
