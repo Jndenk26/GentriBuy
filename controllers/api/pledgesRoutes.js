@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const Pledges = require('../models/pledges');
+const {Pledges} = require('../../models');
 
 
 router.post('/', async (req, res) => {
   try {
-    const newPledges = await Pledges.create({
+    const newPledge = await Pledges.create({
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -25,7 +25,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!pledgesData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+      res.status(404).json({ message: 'No pledge found with this id!' });
       return;
     }
 
