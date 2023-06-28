@@ -1,0 +1,18 @@
+[
+    {
+      "capital": 5000.00,
+      "user_id": 1
+    },
+    {
+        "capital": 10000.00,
+        "user_id": 2
+      },
+      {
+        "capital": 15000.00,
+        "user_id": 3
+      },
+      {
+        "capital": 200.00,
+        "user_id": 4
+      }
+  ]
