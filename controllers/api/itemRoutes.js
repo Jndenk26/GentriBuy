@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
         
         const items = itemsData.map((items) => items.get({ plain: true }));
 
-        res.status(200).json(Items)
+        res.status(200).json(items)
     } catch(err) {
         res.status(400).json(err);
     }
