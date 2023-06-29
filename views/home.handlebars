@@ -11,18 +11,13 @@
     </header>
   
     <div id="homeItemContainer">
+      {{#each items}}
       <div class="homeItemBox">
-        <h3>ITEM 1</h3>
-        <p>$0000 saved out of $2,000</p>
+        <h3>{{name}}</h3>
+        <p>$0000 saved out of ${{cost}}</p>
       </div>
-      <div class="homeItemBox">
-        <h3>ITEM 2</h3>
-        <p>$0000 saved out of $2,000</p>
-      </div>
-      <div class="homeItemBox">
-        <h3>ITEM 3</h3>
-        <p>$0000 saved out of $2,000</p>
-      </div>
+      {{/each}}
+      
     </div>
 
   </div>
