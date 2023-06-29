@@ -7,10 +7,11 @@
 
   <div id="homeContainer">
     
+    {{#each items}}
     <div id="itemPageContainer">
-      <h1>ITEM 1</h1>
-      <h3>$0000 saved out of $2,000</h3>
-      <p>this is where the notes can go... blah blah blah sample text this means nothing just want to make sure this will wrap</p>
+      <h1>{{name}}</h1>
+      <h3>$0000 saved out of ${{cost}}</h3>
+      <p>{{notes}}</p>
     </div>
-
+    {{/each}}
   </div>
