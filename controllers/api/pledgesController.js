@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Pledges = require('../models/pledges');
+const Pledges = require('../../models/pledges');
 
 
 router.post('/', async (req, res) => {
