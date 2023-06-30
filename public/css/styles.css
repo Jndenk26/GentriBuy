@@ -105,5 +105,33 @@ header {
 
 
 #landingBox {
-    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+#landingBox h1 {
+    font-size: 80px;
+    color: chartreuse;
+    font-family: sans-serif;
+    text-shadow: 3px 3px 10px black;
+}
+
+#landingBox p {
+    font-size: 20px;
+    font-family: cursive;
+    margin-top: -10%;
+    margin-bottom: 10%;
+    color: white;
+}
+
+#landingBox button {
+    margin: 5%;
+    font-size: 25px;
+    padding: 8px;
+}
+
+#landingBox button:hover {
+    background-color: aqua;
 }
