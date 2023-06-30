@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const { Items, User } = require('../models');
+const userItems = require('./userItems');
 // router.get('/', async (req, res) =>{
 //     res.render('home');
 //   });
 
+router.use('/items', userItems)
 
 router.get('/', async (req, res)=> {
   res.status(200).render('landing')
