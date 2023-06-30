@@ -4,7 +4,11 @@ const { Items, User } = require('../models');
 //     res.render('home');
 //   });
 
-router.get('/', async (req, res) => {
+
+router.get('/', async (req, res)=> {
+  res.status(200).render('landing')
+})
+router.get('/home', async (req, res) => {
   try{
       const itemsData = await Items.findAll({
           include:[
