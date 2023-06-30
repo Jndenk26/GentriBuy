@@ -33,6 +33,11 @@ main {
     margin-top: 5%;
 }
 
+#mainNav .newText {
+    color:rgb(0, 247, 255);
+    margin-top: 50%;
+}
+
 #homeContainer {
     width: 80%;
 }
