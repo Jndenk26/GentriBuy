@@ -10,8 +10,8 @@ router.get('/items',withAuth, async (req, res) => {
             include: [{ model: Items }],
           });
       
-          const user = userData.get({ plain: true });
-      console.log(user)
+        const user = userData.get({ plain: true });
+
         res.status(200).render('items', { ...user });
 
     } catch(err) {
