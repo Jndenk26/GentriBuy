@@ -1,17 +1,12 @@
 const router = require('express').Router();
 const { Items, User } = require('../models');
-const userItems = require('./userItems');
-// router.get('/', async (req, res) =>{
-//     res.render('home');
-//   });
-
-router.use('/items', userItems)
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res)=> {
   res.status(200).render('landing')
 })
 
-router.get('/home', async (req, res) => {
+router.get('/home',withAuth, async (req, res) => {
   try{
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },

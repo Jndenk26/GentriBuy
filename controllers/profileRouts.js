@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const { Items, User } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+
+router.get('/items',withAuth, async (req, res) => {
     try{
         const itemsData = await Items.findAll({
             include:[
