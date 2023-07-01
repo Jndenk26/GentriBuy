@@ -10,20 +10,22 @@ router.use('/items', userItems)
 router.get('/', async (req, res)=> {
   res.status(200).render('landing')
 })
+
 router.get('/home', async (req, res) => {
   try{
-      const itemsData = await Items.findAll({
-          include:[
-              {
-              model: User,
-              attributes:{exclude: ['password']}
-              }
-          ]
-      })
-      
-      const items = itemsData.map((items) => items.get({ plain: true }));
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Items }],
+    });
 
-      res.status(200).render('home', { items });
+    const user = userData.get({ plain: true });
+
+      
+
+      res.status(200).render('home', { 
+        ...user,
+        logged_in: true
+      });
 
   } catch(err) {
       res.status(400).json(err);
