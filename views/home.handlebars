@@ -4,7 +4,7 @@
   <div id="homeContainer">
   
     <header>
-      <h1 id="homeGreeting">Hello, USER</h1>
+      <h1 id="homeGreeting">Hello, {{name}}</h1>
       <h2 id="homeFunds"> Total Funds: $5,000</h2>
       <a href="/api/addFunds"><button>Add Funds</button></a>
     </header>
@@ -13,7 +13,7 @@
       {{#each items}}
       <div class="homeItemBox">
         <h3>{{name}}</h3>
-        <p>$0000 saved out of ${{cost}}</p>
+        <p>${{pledged}} saved out of ${{cost}}</p>
       </div>
       {{/each}}
       
