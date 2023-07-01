@@ -5,18 +5,14 @@ const withAuth = require('../utils/auth');
 
 router.get('/items',withAuth, async (req, res) => {
     try{
-        const itemsData = await Items.findAll({
-            include:[
-                {
-                model: User,
-                attributes:{exclude: ['password']}
-                }
-            ]
-        })
-        
-        const items = itemsData.map((items) => items.get({ plain: true }));
-
-        res.status(200).render('item', { items });
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: Items }],
+          });
+      
+          const user = userData.get({ plain: true });
+      console.log(user)
+        res.status(200).render('items', { ...user });
 
     } catch(err) {
         res.status(400).json(err);
