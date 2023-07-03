@@ -20,4 +20,8 @@ router.get('/items',withAuth, async (req, res) => {
 })
 
 
+router.get('/addItem',withAuth, async (req, res) => {
+    res.status(200).render('addItem')
+})
+
   module.exports = router;
