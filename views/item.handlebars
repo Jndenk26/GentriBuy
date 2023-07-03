@@ -1,11 +1,11 @@
 
 
   {{> navbar}}
-
+<div class="item-container">
   <div id="homeContainer">
     
     {{#each items}}
-    <div id="itemPageContainer">
+    <div class="itemPageContainer">
       <h1>{{name}}</h1>
       <h3>$0000 saved out of ${{cost}}</h3>
       <p>{{notes}}</p>
@@ -15,3 +15,10 @@
     </div>
     {{/each}}
   </div>
+  
+  <div>
+  <canvas id="myChart"></canvas>
+</div>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/chart.js"></script>

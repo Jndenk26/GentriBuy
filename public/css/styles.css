@@ -60,7 +60,7 @@ header {
     text-align: center;
 }
 
-#itemPageContainer {
+.itemPageContainer {
     color: white;
     text-align: center;
     border: 3px solid #071A52;
@@ -134,4 +134,11 @@ header {
 
 #landingBox button:hover {
     background-color: aqua;
+}
+
+.item-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
