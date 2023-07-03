@@ -23,6 +23,13 @@ Items.init(
         isNumeric: true,
       },
     },
+    pledged: {
+      type: DataTypes.FLOAT(100,2),
+      allowNull: false,
+      validate: {
+        isNumeric: true,
+      },
+    },
     notes: {
       type: DataTypes.TEXT,
       allowNull: false,
