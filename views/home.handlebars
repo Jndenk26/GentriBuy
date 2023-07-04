@@ -5,7 +5,7 @@
   
     <header>
       <h1 id="homeGreeting">Hello, {{name}}</h1>
-      <h2 id="homeFunds"> Total Funds: $5,000</h2>
+      <h2 id="homeFunds" data-capital="{{fund.capital}}"> Total Funds: ${{format_amount fund.capital}}</h2>
       <a href="/api/addFunds"><button>Add Funds</button></a>
     </header>
   
