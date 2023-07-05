@@ -1,5 +1,6 @@
 :root {
     --darkBlue: #071A52;
+    --lightGreen: #A7FF83;
 }
 
 body {
@@ -13,12 +14,33 @@ main {
 }
 
 #homeContainer {
-    width: 80%;
+    width: 100%;
 }
 
 header {
     text-align: center;
+    background-color: var(--darkBlue);
+    color: white;
+    width: 75%;
+    box-shadow: 0 5px 6px rgba(0,0,0,.5);
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
 }
+
+header h1 {
+  font-size: 50px;
+  text-shadow: 1px 1px 3px black;
+  margin-left: -5%;
+}
+
+header h2 {
+  font-size: 26px;
+  color: var(--lightGreen);
+  text-shadow: 1px 1px 3px black;
+}
+
 
 #homeItemContainer {
     display: inline-flex;
@@ -29,9 +51,12 @@ header {
 
 .homeItemBox {
     width: 26%;
-    border: 5px solid chartreuse;
+    border: 5px solid var(--darkBlue);
+    background-color: #1B6B93;
     margin-top: 3%;
     text-align: center;
+    box-shadow: 0 5px 6px rgba(0,0,0,.5);
+    color: white;
 }
 
 #itemPageContainer {
@@ -233,7 +258,7 @@ nav ul li div {
   
 #logoutButton {
   position: absolute;
-  right: 5%;
+  right: 2%;
   background-color: firebrick;
   color: white;
   padding: 5px 10px 5px 10px;
