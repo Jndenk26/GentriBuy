@@ -4,9 +4,13 @@
   <div id="homeContainer">
   
     <header>
-      <h1 id="homeGreeting">Hello, {{name}}</h1>
-      <h2 id="homeFunds"> Total Funds: $5,000</h2>
-      <a href="/api/addFunds"><button>Add Funds</button></a>
+      <h1 id="homeGreeting" data-id="{{id}}">Hello, {{name}}</h1>
+      <h2 id="homeFunds" data-capital="{{fund.capital}}"> Total Funds: ${{format_amount fund.capital}}</h2>
+      <div class="fundsControl">
+        <button id="subtract">-</button>
+        <input id="fundsInput">
+        <button id="add" >+</button>
+      </div>
     </header>
   
     <div id="homeItemContainer">
@@ -21,3 +25,4 @@
 
   </div>
 
+<script src="./js/home.js"></script>

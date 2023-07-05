@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
         
         document.location.replace('/home');
       } else {
-        alert(response.statusText);
+        throw err;
       }
     }
   };

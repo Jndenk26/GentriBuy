@@ -1,6 +1,7 @@
 const User = require('./User');
 const Funds = require('./Funds');
 const Items = require('./items');
+const Transactions = require('./Transactions');
 
 // User to items
 User.hasMany(Items, {
@@ -24,4 +25,13 @@ Funds.belongsTo(User, {
 });
 //----------
 
-module.exports = { User, Funds, Items };
+//user to transactions
+User.hasMany(Transactions, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+})
+
+Transactions.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+module.exports = { User, Funds, Items, Transactions };
