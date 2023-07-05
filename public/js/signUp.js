@@ -15,7 +15,7 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/home');
       } else {
-        alert(response.statusText);
+        throw err;
       }
     }
   };

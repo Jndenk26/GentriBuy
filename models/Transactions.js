@@ -19,7 +19,7 @@ Transactions.init(
         type: DataTypes.FLOAT,
         allowNull: false,
       },
-    endCapital: {
+    capital: {
         type: DataTypes.FLOAT,
         allowNull: false,
       },
