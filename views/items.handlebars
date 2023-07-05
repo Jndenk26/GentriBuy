@@ -4,10 +4,15 @@
 <div class="item-container">
   <div id="homeContainer">
     
+<<<<<<< HEAD:views/item.handlebars
     {{#each items}}
     <div class="itemPageContainer">
+=======
+    {{#each items as |item|}}
+    <div id="itemPageContainer">
+>>>>>>> 1f5f3ee099cf61d4d4ccbdcc2b1e5fa32a3d7f6b:views/items.handlebars
       <h1>{{name}}</h1>
-      <h3>$0000 saved out of ${{cost}}</h3>
+      <h3>${{pledged}} saved out of ${{cost}}</h3>
       <p>{{notes}}</p>
       <label for="addPledge">Add Money:</label>
       <input type="text" id="addPledge" name="addPledge" required>
