@@ -13,6 +13,7 @@ Funds.init(
     },
     capital: {
       type: DataTypes.FLOAT,
+      defaultValue: 0,
       allowNull: false,
     },
     user_id: {
