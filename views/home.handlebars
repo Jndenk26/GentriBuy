@@ -17,7 +17,7 @@
   
     <div id="homeItemContainer">
       {{#each items}}
-      <div class="homeItemBox">
+      <div onclick=" location.href='/home/item/{{id}}' " class="homeItemBox">
         <h3>{{name}}</h3>
         <div class="savedLine">
           <p class="greenFont">${{pledged}}</p>
