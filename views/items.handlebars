@@ -3,15 +3,12 @@
   {{> navbar}}
 
   <div id="homeContainer">
-    
     {{#each items as |item|}}
     <div id="itemPageContainer">
-      <h1>{{name}}</h1>
+      <h1 data-id="{{id}}" >{{name}}</h1>
       <h3>${{pledged}} saved out of ${{cost}}</h3>
+      
       <p>{{notes}}</p>
-      <label for="addPledge">Add Money:</label>
-      <input type="text" id="addPledge" name="addPledge" required>
-      <input type="submit" value="Add">
     </div>
     {{/each}}
   </div>
