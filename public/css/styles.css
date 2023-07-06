@@ -155,14 +155,12 @@ header {
     background-color: aqua;
 }
 
-<<<<<<< HEAD
 .item-container {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
-=======
-
+}
 nav {
     float: left;
     position: fixed;
@@ -249,5 +247,4 @@ nav ul li div {
 #logoutButton:hover {
   background-color: #A7FF83;
   color: #071A52;
->>>>>>> 1f5f3ee099cf61d4d4ccbdcc2b1e5fa32a3d7f6b
 }
