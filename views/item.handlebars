@@ -1,10 +1,12 @@
   {{> navbar}}
 
-<header>
-    <h2 id="itemsFunds" data-id="{{fund.id}}" data-capital="{{fund.capital}}"> Total Funds: ${{format_amount fund.capital}}</h2>
-</header>
+<div id="singleItemContainer">
 
-<div id="itemPageContainer">
+  <header>
+    <h2 id="itemsFunds" data-id="{{fund.id}}" data-capital="{{fund.capital}}"> Total Funds: ${{format_amount fund.capital}}</h2>
+  </header>
+
+  <div id="itemPageContainer">
       <h1 id="itemName" data-id="{{items.0.id}}" >{{items.0.name}}</h1>
       <h3 id="pledged" data-cost="{{items.0.cost}}" data-pledged="{{items.0.pledged}}">${{items.0.pledged}} saved out of ${{items.0.cost}}</h3>
       
@@ -15,6 +17,7 @@
         <button id="add" >+</button>
       </div>
    
+  </div>
 </div>
 
  <script src="/js/item.js"></script>
