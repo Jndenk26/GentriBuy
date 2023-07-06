@@ -132,6 +132,11 @@ header h2 {
     margin: 1% 0 5% 0;
 }
 
+#singleItemContainer {
+  margin: auto;
+  margin-top: 0;
+  width: 80%;
+}
 
 #loginContainer {
   align-items: center;
