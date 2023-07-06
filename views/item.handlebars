@@ -6,7 +6,7 @@
 
 <div id="itemPageContainer">
       <h1 id="itemName" data-id="{{items.0.id}}" >{{items.0.name}}</h1>
-      <h3 id="pledged" data-pledged="{{items.0.pledged}}">${{items.0.pledged}} saved out of ${{cost}}</h3>
+      <h3 id="pledged" data-cost="{{items.0.cost}}" data-pledged="{{items.0.pledged}}">${{items.0.pledged}} saved out of ${{items.0.cost}}</h3>
       
       <p>{{items.0.notes}}</p>
       <div class="fundsControl">
