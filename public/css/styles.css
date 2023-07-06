@@ -44,10 +44,11 @@ header h2 {
 
 
 #homeItemContainer {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
+    width: 75%;
+    margin: auto;
 }
 
 .homeItemBox {
@@ -58,6 +59,23 @@ header h2 {
     text-align: center;
     box-shadow: 0 5px 6px rgba(0,0,0,.5);
     color: white;
+}
+
+.homeItemBox h3 {
+  font-size: 24px;
+}
+
+.greenFont {
+  color: var(--lightGreen);
+  font-size: 24px;
+}
+
+.savedLine {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  align-items: baseline;
 }
 
 #itemPageContainer {
@@ -147,8 +165,6 @@ header h2 {
   background-color: cornflowerblue;
 }
 
-
-
 #landingBox {
     text-align: center;
     margin-left: auto;
@@ -175,10 +191,14 @@ header h2 {
     margin: 5%;
     font-size: 25px;
     padding: 8px;
+    border-radius: 5px;
+    background-color: var(--darkBlue);
+    color: white;
 }
 
 #landingBox button:hover {
-    background-color: aqua;
+    background-color: var(--lightGreen);
+    color: black;
 }
 
 

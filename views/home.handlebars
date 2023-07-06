@@ -19,10 +19,14 @@
       {{#each items}}
       <div class="homeItemBox">
         <h3>{{name}}</h3>
-        <p>${{pledged}} saved out of ${{cost}}</p>
+        <div class="savedLine">
+          <p class="greenFont">${{pledged}}</p>
+          <p>saved out of</p>
+          <p class="greenFont">${{cost}}</p>
+        </div>
       </div>
       {{/each}}
-      
+
     </div>
 
   </div>
