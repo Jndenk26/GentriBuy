@@ -32,7 +32,7 @@ header {
 
 header h1 {
   font-size: 50px;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 2px 2px 4px black;
   margin-left: -5%;
 }
 
@@ -49,6 +49,7 @@ header h2 {
     justify-content: space-around;
     width: 75%;
     margin: auto;
+    margin-top: 0;
 }
 
 .homeItemBox {
@@ -59,6 +60,10 @@ header h2 {
     text-align: center;
     box-shadow: 0 5px 6px rgba(0,0,0,.5);
     color: white;
+}
+
+.homeItemBox h3 {
+  text-shadow: 1px 1px 3px black;
 }
 
 .homeItemBox h3 {
@@ -81,12 +86,18 @@ header h2 {
 #itemPageContainer {
     color: white;
     text-align: center;
-    border: 3px solid #071A52;
-    background-color: #086972;
+    border-radius: 5px;
+    border: 5px solid #071A52;
+    background-color: #1B6B93;
     width: fit-content;
     max-width: 60%;
     margin: auto;
+    margin-top: 5%;
     padding: 5%;
+}
+
+#itemPageContainer h1 {
+  text-shadow: 1px 1px 3px black;
 }
 
 

@@ -2,12 +2,15 @@
 
   {{> navbar}}
 
-  <div id="homeContainer">
-    
+  <div id="homeItemContainer">
     {{#each items as |item|}}
     <div id="itemPageContainer">
       <h1>{{name}}</h1>
-      <h3>${{pledged}} saved out of ${{cost}}</h3>
+      <div class="savedLine">
+          <p class="greenFont">${{pledged}}</p>
+          <p>saved out of</p>
+          <p class="greenFont">${{cost}}</p>
+      </div>
       <p>{{notes}}</p>
       <label for="addPledge">Add Money:</label>
       <input type="text" id="addPledge" name="addPledge" required>
