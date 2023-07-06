@@ -219,19 +219,19 @@ nav ul li:after {
   transition:all .4s ease-out;
 }
   
-nav ul li:nth-child(1):after { 
+#navone:after { 
   content: "Home";
   line-height: 88px;
   font-weight: 700;
   font-size: 40px;  
 }
-nav ul li:nth-child(2):after { 
+#navtwo:after { 
   content: "Items";
   line-height: 88px;
   font-weight: 700;
   font-size: 40px;  
 }
-nav ul li:nth-child(3):after { 
+#navthree:after { 
   content: "Add Item";
   line-height: 88px;
   font-weight: 700;
