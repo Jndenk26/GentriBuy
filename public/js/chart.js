@@ -6,9 +6,10 @@ const dataArr = []
 itemsEl.forEach(itemEl => {
     console.log(itemEl)
     let name = itemEl.children[0].textContent
-    let values = itemEl.children[1].textContent.split(" saved out of $")
+    let values = itemEl.children[1].textContent.split(" saved out of ")
     let pledge = values[0].substring(1)
-    let cost = values[1]
+    let costValues = values[1].split("$");
+    let cost = costValues[1];
     let notes = itemEl.children[2].textContent
     itemArr.push({name, cost, notes, pledge})
 
