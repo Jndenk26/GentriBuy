@@ -83,7 +83,7 @@ header h2 {
   align-items: baseline;
 }
 
-#itemPageContainer {
+.itemPageContainer {
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -217,7 +217,12 @@ header h2 {
     color: black;
 }
 
-
+.item-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
 nav {
     float: left;
     position: fixed;

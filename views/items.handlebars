@@ -1,18 +1,21 @@
 
 
   {{> navbar}}
-
-
-  <div id="homeItemContainer">
-    {{#each items as |item|}}
-    <div id="itemPageContainer">
-      <h1>{{name}}</h1>
-      <div class="savedLine">
-          <p class="greenFont">${{pledged}}</p>
-          <p>saved out of</p>
-          <p class="greenFont">${{cost}}</p>
-      </div>
+<div class="item-container">
+  <div id="homeContainer">
+    {{#each items}}
+    <div class="itemPageContainer">
+      <h1 data-id="{{id}}" >{{name}}</h1>
+      <h3>${{pledged}} saved out of ${{cost}}</h3>
+      
       <p>{{notes}}</p>
     </div>
     {{/each}}
   </div>
+  
+  <div>
+  <canvas id="myChart"></canvas>
+</div>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/chart.js"></script>
