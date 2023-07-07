@@ -100,6 +100,15 @@ header h2 {
   text-shadow: 1px 1px 3px black;
 }
 
+#myChart {
+  background-color: white;
+}
+
+#deleteButton {
+  padding: 0;
+  background-color: red;
+}
+
 
 #addItemContainer {
     display: flex;
