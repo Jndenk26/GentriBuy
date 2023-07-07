@@ -6,6 +6,7 @@
 body {
   background-color: #464646;
   background: linear-gradient(133deg, rgba(70,70,70,1) 13%, rgba(128,128,128,0.9327439594001663) 52%, rgba(70,70,70,1) 91%);
+  background-attachment: fixed;
 }
 
 main {
@@ -61,6 +62,10 @@ header h2 {
     box-shadow: 0 5px 6px rgba(0,0,0,.5);
     color: white;
     position: relative;
+}
+
+.homeItemBox:hover {
+  background-color: #55acd8;
 }
 
 #deleteButton {
@@ -240,6 +245,7 @@ header h2 {
     width: 80%;
     margin: auto;
     margin-top: 0;
+    flex-wrap: wrap;
 }
 nav {
     float: left;
