@@ -64,6 +64,10 @@ header h2 {
     position: relative;
 }
 
+.homeItemBox:hover {
+  background-color: #55acd8;
+}
+
 #deleteButton {
   padding: 0;
   background-color: firebrick;
