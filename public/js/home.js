@@ -97,3 +97,28 @@ document
 document
 .querySelector('.fundsControl')
 .addEventListener('click', subtractFundsFormHandler);
+
+
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/items/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/home');
+    } else {
+      throw new Error(`Couldn't del item`);
+    }
+  }
+};
+
+
+
+document
+  .querySelector('.homeItemBox')
+  .addEventListener('click', delButtonHandler);
+
+
