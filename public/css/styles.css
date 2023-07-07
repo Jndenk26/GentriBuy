@@ -60,6 +60,20 @@ header h2 {
     text-align: center;
     box-shadow: 0 5px 6px rgba(0,0,0,.5);
     color: white;
+    position: relative;
+}
+
+#deleteButton {
+  padding: 0;
+  background-color: firebrick;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 3px;
+}
+
+#deleteButton:hover {
+  background-color: red;
 }
 
 .homeItemBox h3 {
@@ -102,11 +116,6 @@ header h2 {
 
 #myChart {
   background-color: white;
-}
-
-#deleteButton {
-  padding: 0;
-  background-color: red;
 }
 
 
@@ -228,9 +237,9 @@ header h2 {
 
 .item-container {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
 }
 nav {
     float: left;
@@ -316,6 +325,5 @@ nav ul li div {
 }
 
 #logoutButton:hover {
-  background-color: #A7FF83;
-  color: #071A52;
+  background-color: red;
 }
