@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Cool Item",
+      "cost": 200.00,
+      "pledged": 5.00,
+      "notes": "I really want this item because...",
+      "user_id": 1
+    },
+    {
+        "name": "Neat Item",
+        "cost": 700.00,
+        "pledged": 5.00,
+        "notes": "I really want this item because...",
+        "user_id": 2
+    },
+    {
+        "name": "Awesome Item",
+        "cost": 2000.00,
+        "pledged": 5.00,
+        "notes": "I really want this item because...",
+        "user_id": 3
+    },
+    {
+        "name": "Amazing Item",
+        "cost": 2.00,
+        "pledged": 5.00,
+        "notes": "I really want this item because...",
+        "user_id": 4
+    }
+  ]

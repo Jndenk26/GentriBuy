@@ -1,0 +1,27 @@
+
+  {{> navbar}}
+
+  <div id='addItemContainer'>
+    <h2>
+      Add New Item!
+    </h2>
+    <form class="newItemForm" action="">
+  
+      <label for="itemName">Item Name:</label>
+      <br />
+      <input type="text" id="itemName" name="itemName" required>
+      <br />
+      <label for="itemCost">How Much Does This Item Cost?:</label>
+      <br />
+      <input type="text" id="itemCost" name="itemCost" required>
+      <br />
+      <label for="itemNotes">Why Do You Want This Item?:</label>
+      <br />
+      <textarea id="itemNotes" name="itemNotes" rows="4" cols="50"></textarea>
+      <br />
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+<script src="/js/addNewItem.js"></script>
+  

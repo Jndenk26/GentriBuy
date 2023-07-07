@@ -1,0 +1,335 @@
+:root {
+    --darkBlue: #071A52;
+    --lightGreen: #A7FF83;
+}
+
+body {
+  background-color: #464646;
+  background: linear-gradient(133deg, rgba(70,70,70,1) 13%, rgba(128,128,128,0.9327439594001663) 52%, rgba(70,70,70,1) 91%);
+  background-attachment: fixed;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+}
+
+#homeContainer {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    background-color: var(--darkBlue);
+    color: white;
+    width: 75%;
+    box-shadow: 0 5px 6px rgba(0,0,0,.5);
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+header h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 4px black;
+  margin-left: -5%;
+}
+
+header h2 {
+  font-size: 26px;
+  color: var(--lightGreen);
+  text-shadow: 1px 1px 3px black;
+}
+
+
+#homeItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.homeItemBox {
+    width: 26%;
+    border: 5px solid var(--darkBlue);
+    background-color: #1B6B93;
+    margin-top: 3%;
+    text-align: center;
+    box-shadow: 0 5px 6px rgba(0,0,0,.5);
+    color: white;
+    position: relative;
+}
+
+.homeItemBox:hover {
+  background-color: #55acd8;
+}
+
+#deleteButton {
+  padding: 0;
+  background-color: firebrick;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 3px;
+}
+
+#deleteButton:hover {
+  background-color: red;
+}
+
+.homeItemBox h3 {
+  text-shadow: 1px 1px 3px black;
+}
+
+.homeItemBox h3 {
+  font-size: 24px;
+}
+
+.greenFont {
+  color: var(--lightGreen);
+  font-size: 24px;
+}
+
+.savedLine {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  align-items: baseline;
+}
+
+.itemPageContainer {
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    border: 5px solid #071A52;
+    background-color: #1B6B93;
+    width: fit-content;
+    max-width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+#itemPageContainer h1 {
+  text-shadow: 1px 1px 3px black;
+}
+
+#myChart {
+  background-color: white;
+}
+
+
+#addItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    border: 5px solid chartreuse;
+}
+
+#addItemContainer form{
+    width: 60%;
+}
+
+#addItemContainer input{
+    width: 100%;
+    margin: 1% 0 5% 0;
+}
+
+#addItemContainer input[type="submit"] {
+    width: 40%;
+    height: 2rem;
+}
+
+#addItemContainer textarea{
+    width: 100%;
+    margin: 1% 0 5% 0;
+}
+
+#singleItemContainer {
+  margin: auto;
+  margin-top: 0;
+  width: 80%;
+}
+
+#loginContainer {
+  align-items: center;
+  width: 30%;
+  min-width: max-content;
+  min-height: fit-content;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,1);
+  border-radius: 5px;
+}
+
+#loginContainer h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: sans-serif;
+
+}
+
+#loginContainer input {
+  width: 80%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #adadad;
+  margin: 10% 0 10% 0;
+}
+
+#loginContainer input[type="submit"] {
+  width: fit-content;
+  border: none;
+  font-size: 18px;
+  padding: 5px;
+  width: 40%;
+  border-radius: 5px;
+  background-color: #A7FF83;
+  border: 2px solid var(--darkBlue);
+}
+
+#loginContainer input[type="submit"]:hover {
+  background-color: cornflowerblue;
+}
+
+#landingBox {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+#landingBox h1 {
+    font-size: 80px;
+    color: chartreuse;
+    font-family: sans-serif;
+    text-shadow: 3px 3px 10px black;
+}
+
+#landingBox p {
+    font-size: 20px;
+    font-family: cursive;
+    margin-top: -10%;
+    margin-bottom: 10%;
+    color: white;
+}
+
+#landingBox button {
+    margin: 5%;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--darkBlue);
+    color: white;
+}
+
+#landingBox button:hover {
+    background-color: var(--lightGreen);
+    color: black;
+}
+
+.item-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+nav {
+    float: left;
+    position: fixed;
+    top: 0;
+    left: -40px;
+    background: transparent;
+  }
+  
+nav ul {
+  text-align: center;
+  list-style: none;
+}
+  
+nav ul li {
+  position: relative;
+  width: 70px;
+  cursor: pointer;
+  background: #071A52;
+  text-transform: uppercase;
+  transition:all .4s ease-out;
+}
+  
+nav ul li:after {
+  position: absolute;
+  background: #A7FF83;
+  color: #071A52;
+  top:0;
+  left: 70px;
+  width: max-content; 
+  padding: 0 10px 0 10px;
+  height: 100%;
+  opacity:.5;
+  transform: perspective(400px) rotateY(90deg);
+  transform-origin: 0 100%;
+  transition:all .4s ease-out;
+}
+  
+#navone:after { 
+  content: "Home";
+  line-height: 88px;
+  font-weight: 700;
+  font-size: 40px;  
+}
+#navtwo:after { 
+  content: "Items";
+  line-height: 88px;
+  font-weight: 700;
+  font-size: 40px;  
+}
+#navthree:after { 
+  content: "Add Item";
+  line-height: 88px;
+  font-weight: 700;
+  font-size: 40px;
+}
+  
+nav ul li:hover {
+  transform: translateX(-70px);
+}
+  
+nav ul li:hover:after {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+  
+nav ul li > div {
+  display: inline-block;
+  padding: 25px 0;
+  background: transparent;
+}
+  
+nav ul li div { 
+  position: relative; 
+}
+  
+#logoutButton {
+  position: absolute;
+  right: 2%;
+  background-color: firebrick;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+#logoutButton:hover {
+  background-color: red;
+}
