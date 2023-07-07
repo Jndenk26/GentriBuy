@@ -17,13 +17,15 @@ const addFundsFormHandler = async (event) =>{
   const itemId = itemNameEl.getAttribute('data-id')
   const startCapital = fundsEl.getAttribute("data-capital")
   const startPledged = pledgedEl.getAttribute("data-pledged")
+  const itemCost = pledgedEl.getAttribute("data-cost")
    
   const capital = +startCapital - +difference
 
   const pledged = +startPledged + +difference
 
   if(capital < 0) return
-  
+
+  if(pledged > itemCost) return
   //post all numbers involved as a transaction
   const transactionResponse = await fetch('/api/transactions', {
       method: 'POST',
