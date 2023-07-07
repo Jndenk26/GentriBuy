@@ -20,11 +20,9 @@ const addFundsFormHandler = async (event) =>{
         headers: { 'Content-Type': 'application/json' },
       });
   
-      if (transactionResponse.ok) {
-        
-        document.location.replace('/home');
-      } else {
-        throw err;
+      if (!transactionResponse.ok) {
+      
+        throw new Error(`Couldn't post transaction`);
       }
 
 
@@ -35,13 +33,14 @@ const addFundsFormHandler = async (event) =>{
         headers: { 'Content-Type': 'application/json' },
       });
   
-      if (fundsResponse.ok) {
+      if (!fundsResponse.ok) {
+        throw new Error(`Couldn't post funds`);
         
-        document.location.replace('/home');
-      } else {
-        throw err;
       }
-
+      
+      if(fundsResponse.ok & transactionResponse.ok){
+        document.location.replace(`/home`);
+      }
 
 }
 
@@ -69,11 +68,9 @@ const subtractFundsFormHandler = async (event) =>{
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (transactionResponse.ok) {
+    if (!transactionResponse.ok) {
       
-      document.location.replace('/home');
-    } else {
-      throw err;
+      throw new Error(`Couldn't post transaction`);
     }
 
 
@@ -84,14 +81,14 @@ const subtractFundsFormHandler = async (event) =>{
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (fundsResponse.ok) {
+    if (!fundsResponse.ok) {
+      throw new Error(`Couldn't post funds`);
       
-      document.location.replace('/home');
-    } else {
-      throw err;
     }
 
-
+    if(fundsResponse.ok & transactionResponse.ok){
+      document.location.replace(`/home`);
+    }
 }
 document
   .querySelector('.fundsControl')

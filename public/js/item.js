@@ -33,11 +33,9 @@ const addFundsFormHandler = async (event) =>{
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (transactionResponse.ok) {
+    if (!transactionResponse.ok) {
       
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
+      throw new Error(`Couldn't post transaction`);
     }
 
     const itemResponse = await fetch(`/api/items/${itemId}`, {
@@ -46,11 +44,9 @@ const addFundsFormHandler = async (event) =>{
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (itemResponse.ok) {
+    if (!itemResponse.ok) {
+      throw new Error(`Couldn't post pledged`);
       
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
     }
 
     //saves the new total funds of the fntion as the new funds capital
@@ -60,12 +56,15 @@ const addFundsFormHandler = async (event) =>{
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (fundsResponse.ok) {
+    if (!fundsResponse.ok) {
+      throw new Error(`Couldn't post funds`);
       
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
     }
+
+    if(fundsResponse.ok & itemResponse.ok & transactionResponse.ok){
+      document.location.replace(`/home/item/${itemId}`);
+    }
+
 
 
 }
