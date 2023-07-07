@@ -1,6 +1,6 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
-  
+    
     const name = document.querySelector('#itemName').value.trim();
     const cost = document.querySelector('#itemCost').value.trim();
     const notes = document.querySelector('#itemNotes').value.trim();
@@ -17,7 +17,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/home');
       } else {
-        alert('Failed to create project');
+        throw new Error(`Couldn't post item`);
       }
     }
   };

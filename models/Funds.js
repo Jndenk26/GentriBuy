@@ -12,7 +12,7 @@ Funds.init(
       autoIncrement: true,
     },
     capital: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.FLOAT(100,2),
       defaultValue: 0,
       allowNull: false,
     },
