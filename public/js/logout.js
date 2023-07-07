@@ -7,7 +7,7 @@ const logout = async () => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      throw err
+      throw new Error(`Couldn't login`)
     }
   };
   
