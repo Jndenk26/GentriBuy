@@ -33,9 +33,6 @@ Items.init(
     notes: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        isAlphanumeric: true,
-      },
     },
     user_id: {
         type: DataTypes.INTEGER,
