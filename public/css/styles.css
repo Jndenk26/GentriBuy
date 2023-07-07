@@ -237,9 +237,9 @@ header h2 {
 
 .item-container {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
 }
 nav {
     float: left;
