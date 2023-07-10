@@ -96,46 +96,46 @@ const subtractFundsFormHandler = async (event) =>{
 
   if(pledged < 0) return
 
-  //post all numbers involved as a transaction
+      //post all numbers involved as a transaction
   const transactionResponse = await fetch('/api/transactions', {
-      method: 'POST',
-      body: JSON.stringify({ startCapital, difference,capital }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+    method: 'POST',
+    body: JSON.stringify({ startCapital, difference,capital }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-    if (transactionResponse.ok) {
-      
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
-    }
+  if (!transactionResponse.ok) {
+    
+    throw new Error(`Couldn't post transaction`);
+  }
 
-    const itemResponse = await fetch(`/api/items/${itemId}`, {
-      method: 'PUT',
-      body: JSON.stringify({ pledged }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+  const itemResponse = await fetch(`/api/items/${itemId}`, {
+    method: 'PUT',
+    body: JSON.stringify({ pledged }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-    if (itemResponse.ok) {
-      
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
-    }
+  if (!itemResponse.ok) {
+    throw new Error(`Couldn't post pledged`);
+    
+  }
 
-    //saves the new total funds of the fntion as the new funds capital
-    const fundsResponse = await fetch(`/api/funds/${fundsId}`, {
-      method: 'PUT',
-      body: JSON.stringify({ capital }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+  //saves the new total funds of the fntion as the new funds capital
+  const fundsResponse = await fetch(`/api/funds/${fundsId}`, {
+    method: 'PUT',
+    body: JSON.stringify({ capital }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-    if (fundsResponse.ok) {
-      
-      document.location.replace(`/home/item/${itemId}`);
-    } else {
-      throw err;
-    }
+  if (!fundsResponse.ok) {
+    throw new Error(`Couldn't post funds`);
+    
+  }
+
+  if(fundsResponse.ok & itemResponse.ok & transactionResponse.ok){
+    document.location.replace(`/home/item/${itemId}`);
+  }
+
+
 
 
 }
