@@ -125,19 +125,31 @@ header h2 {
 
 
 #addItemContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    height: 80%;
-    margin: auto;
-    margin-top: 5%;
-    text-align: center;
-    border: 5px solid chartreuse;
+  align-items: center;
+  width: 50%;
+  min-width: max-content;
+  height: 80%;
+  min-height: fit-content;
+  margin: auto;
+  text-align: center;
+  background-color:#1B6B93;
+  padding: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,1);
+  border-radius: 5px;
+  border: 5px solid #071A52;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+#addItemContainer h2 {
+  font-size: 35px;
+  color: #A7FF83;
+  text-shadow: 1px 1px 3px black;
 }
 
 #addItemContainer form{
     width: 60%;
+    margin: auto;
 }
 
 #addItemContainer input{
@@ -148,6 +160,12 @@ header h2 {
 #addItemContainer input[type="submit"] {
     width: 40%;
     height: 2rem;
+    margin-top: 20px;
+    background-color: #A7FF83;
+}
+
+#addItemContainer input[type="submit"]:hover {
+  background-color: #63fb27;
 }
 
 #addItemContainer textarea{
