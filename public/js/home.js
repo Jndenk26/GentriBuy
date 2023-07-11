@@ -102,15 +102,40 @@ document
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
+    const idUser = document.querySelector('#homeGreeting').getAttribute('data-id')
 
-    const response = await fetch(`/api/items/${id}`, {
+    const fundsEl = document.querySelector('#homeFunds')
+
+    const startCapital = fundsEl.getAttribute("data-capital")
+    const pledged = event.target.getAttribute('data-pledged')
+    
+
+    const capital = +startCapital + +pledged
+
+
+    const delResponse = await fetch(`/api/items/${id}`, {
       method: 'DELETE',
     });
 
-    if (response.ok) {
-      document.location.replace('/home');
-    } else {
+    if (!delResponse.ok) {
       throw new Error(`Couldn't del item`);
+    }
+    if(+pledged === 0){
+      document.location.replace(`/home`);
+      return
+    }
+    const fundsResponse = await fetch(`/api/funds/${idUser}`, {
+      method: 'PUT',
+      body: JSON.stringify({ capital }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (!fundsResponse.ok) {
+      throw new Error(`Couldn't post funds`); 
+    }
+
+    if(fundsResponse.ok & delResponse.ok){
+      document.location.replace(`/home`);
     }
   }
 };
