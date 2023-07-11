@@ -118,7 +118,7 @@ const delButtonHandler = async (event) => {
 
 
 document
-  .querySelector('.homeItemBox')
+  .querySelector('#homeItemContainer')
   .addEventListener('click', delButtonHandler);
 
 
